@@ -1,15 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageSquare, Sparkles, Users, User, Settings, ArrowRight } from "lucide-react";
+import { MessageSquare, Sparkles, Users, UserPlus, Settings, ArrowRight } from "lucide-react";
 import { useRef } from "react";
 
 const screens = [
-  { name: "Chat Interface", icon: MessageSquare, color: "from-blue-500 to-primary", desc: "Clean, intuitive, and blisteringly fast." },
-  { name: "AI Assistant", icon: Sparkles, color: "from-primary to-accent", desc: "Your personal intelligence layer." },
-  { name: "Communities", icon: Users, color: "from-emerald-400 to-teal-500", desc: "Organize groups seamlessly." },
-  { name: "User Profile", icon: User, color: "from-orange-400 to-pink-500", desc: "Your identity, elevated." },
-  { name: "Settings", icon: Settings, color: "from-slate-400 to-slate-600", desc: "Total control over your experience." },
+  { name: "Chat Interface", icon: MessageSquare, color: "from-blue-500 to-primary", desc: "Clean, intuitive, and blisteringly fast.", image: "/Screenshot_20261006_001349.jpg" },
+  { name: "AI Assistant", icon: Sparkles, color: "from-primary to-accent", desc: "Your personal intelligence layer.", image: "/Screenshot_20261006_002007.jpg" },
+  { name: "Contacts", icon: Users, color: "from-emerald-400 to-teal-500", desc: "Organize groups seamlessly.", image: "/Screenshot_20261006_001338.jpg" },
+  { name: "Add Contacts", icon: UserPlus, color: "from-orange-400 to-pink-500", desc: "Grow your network effortlessly.", image: "/Screenshot_20261006_001357.jpg" },
 ];
 
 export default function Screenshots() {
@@ -37,8 +36,8 @@ export default function Screenshots() {
             Every screen is meticulously crafted for clarity, speed, and visual delight. Experience an interface that feels alive.
           </p>
         </motion.div>
-        
-        <button 
+
+        <button
           onClick={scrollRight}
           className="hidden md:flex items-center justify-center w-12 h-12 rounded-full glass hover:bg-white/10 transition-colors border border-white/10"
         >
@@ -52,7 +51,7 @@ export default function Screenshots() {
         <div className="absolute top-0 bottom-0 right-0 w-8 md:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
         {/* Carousel Container */}
-        <div 
+        <div
           ref={containerRef}
           className="flex gap-6 overflow-x-auto px-6 md:px-32 pb-16 pt-8 snap-x snap-mandatory hide-scrollbar"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
@@ -70,34 +69,19 @@ export default function Screenshots() {
               >
                 {/* Device Frame */}
                 <div className="relative h-[580px] rounded-[2.5rem] border-[6px] border-surfaceElevated bg-surface shadow-2xl overflow-hidden transition-all duration-500 group-hover:-translate-y-4 group-hover:shadow-[0_20px_60px_-15px_rgba(98,96,255,0.4)]">
-                  
+
                   {/* Notch */}
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-surfaceElevated rounded-b-2xl z-20" />
-                  
+
                   {/* Screen Content Visualization (Mockup) */}
-                  <div className="absolute inset-0 bg-background flex flex-col p-4 pt-10">
-                    <div className="w-full flex justify-between items-center mb-6">
-                      <div className="w-8 h-8 rounded-full bg-surfaceElevated flex items-center justify-center">
-                        <Icon className="w-4 h-4 text-textSecondary" />
-                      </div>
-                      <div className="h-2 w-16 bg-surfaceElevated rounded-full" />
-                    </div>
-                    
-                    <div className={`w-full h-32 rounded-2xl bg-gradient-to-br ${screen.color} opacity-20 mb-6`} />
-                    
-                    <div className="space-y-4">
-                      {[1, 2, 3, 4].map((i) => (
-                        <div key={i} className="flex gap-3 items-center">
-                          <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${screen.color} opacity-30`} />
-                          <div className="flex-1 space-y-2">
-                            <div className="h-2 w-full bg-surfaceElevated rounded-full" />
-                            <div className="h-2 w-2/3 bg-surfaceElevated rounded-full" />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                  <div className="absolute inset-0 bg-background flex flex-col">
+                    <img
+                      src={screen.image}
+                      alt={screen.name}
+                      className="w-full h-full object-cover rounded-[2.5rem]"
+                    />
                   </div>
-                  
+
                   {/* Hover Overlay Title */}
                   <div className="absolute inset-0 bg-background/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30 flex flex-col items-center justify-center p-6 text-center">
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${screen.color} p-[1px] mb-4`}>

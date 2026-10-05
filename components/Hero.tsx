@@ -101,74 +101,12 @@ export default function Hero() {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-surfaceElevated rounded-b-3xl z-30" />
             
             {/* Screen Content */}
-            <div className="absolute inset-0 bg-background flex flex-col pt-12 pb-6 px-4">
-              {/* Header */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent p-[2px]">
-                    <div className="w-full h-full bg-surface rounded-full flex items-center justify-center">
-                       <Sparkles className="w-5 h-5 text-primary" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold leading-tight">Aurex</h3>
-                    <p className="text-xs text-textSecondary">Online</p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Chat Area */}
-              <div className="flex-1 flex flex-col gap-4 overflow-hidden relative">
-                {/* Received Message */}
-                <div className="flex gap-3">
-                   <div className="w-8 h-8 rounded-full bg-surfaceElevated flex-shrink-0 flex items-center justify-center">
-                      <span className="text-xs font-medium text-white">S</span>
-                   </div>
-                   <div className="bg-surfaceElevated p-3 rounded-2xl rounded-tl-sm text-sm text-textSecondary max-w-[80%]">
-                      Hey! Did you check out the new design system? It looks incredible.
-                   </div>
-                </div>
-                
-                {/* Sent Message */}
-                <div className="flex gap-3 self-end flex-row-reverse">
-                   <div className="bg-primary p-3 rounded-2xl rounded-tr-sm text-sm text-white max-w-[80%] shadow-lg shadow-primary/20">
-                      Yes! The glassmorphism and aurora effects are perfectly balanced.
-                   </div>
-                </div>
-
-                {/* AI Suggestion Chip */}
-                <div className="self-end mt-1 mr-2">
-                   <div className="glass px-3 py-1.5 rounded-full border border-primary/30 flex items-center gap-1.5">
-                      <Sparkles className="w-3 h-3 text-primary" />
-                      <span className="text-xs text-primary font-medium">Generate response</span>
-                   </div>
-                </div>
-                
-                {/* Received Image (Simulated) */}
-                <div className="flex gap-3 mt-2">
-                   <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-green-400 to-blue-500 flex-shrink-0" />
-                   <div className="bg-surfaceElevated p-1 rounded-2xl rounded-tl-sm max-w-[70%]">
-                      <div className="w-full h-24 bg-gradient-to-br from-accent/20 to-primary/10 rounded-xl mb-2 flex items-center justify-center">
-                        <Users className="w-6 h-6 text-textSecondary/50" />
-                      </div>
-                      <p className="text-xs text-textSecondary px-2 pb-1">Community dashboard</p>
-                   </div>
-                </div>
-                
-                {/* Bottom Gradient Fade */}
-                <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background to-transparent" />
-              </div>
-              
-              {/* Input Area */}
-              <div className="mt-auto glass-panel p-2 rounded-full flex items-center gap-2 mt-4">
-                <div className="w-8 h-8 rounded-full bg-surface flex items-center justify-center">
-                  <Sparkles className="w-4 h-4 text-textSecondary" />
-                </div>
-                <div className="flex-1 text-xs text-textSecondary/50">Message...</div>
-                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/30">
-                  <Mic className="w-4 h-4 text-white" />
-                </div>
-              </div>
+            <div className="absolute inset-0 bg-background">
+              <img 
+                src="/Screenshot_20261006_002007.jpg" 
+                alt="Aurex Chat Interface" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
           
